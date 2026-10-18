@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - name: Download and verify the owner-approved release
         env:
-          MANIFEST_SHA256: 1dfe7b256ed478bb9bc28e1130515f6c57608272b611001e0ebc817e879b7626
+          MANIFEST_SHA256: 3f67b3cfd62eadadeef4e3947c8170d674cd26226d3683eb5f33c513d621d861
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/cad-assets"
