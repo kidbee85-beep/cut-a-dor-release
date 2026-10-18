@@ -1,0 +1,85 @@
+name: Publish verified Cut-A-Dor release
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/release.yml']
+permissions:
+  contents: write
+concurrency:
+  group: cut-a-dor-public-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download and verify the owner-approved release
+        env:
+          MANIFEST_SHA256: 1dfe7b256ed478bb9bc28e1130515f6c57608272b611001e0ebc817e879b7626
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/cad-assets"
+          curl --fail --location --silent --show-error --retry 3 https://cut-a-dor.sugarypixie10.chatgpt.site/release-manifest.json -o "$RUNNER_TEMP/cad-assets/release-manifest.json"
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          import os,json,hashlib,subprocess,zipfile,shutil
+          out=Path(os.environ['RUNNER_TEMP'])/'cad-assets'
+          raw=(out/'release-manifest.json').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()==os.environ['MANIFEST_SHA256'],'Unexpected manifest'
+          m=json.loads(raw);assert m['version']=='1.2.1' and m['identity']=='FM-1_7010201'
+          for a in m['assets']:
+              assert '/' not in a['name'] and '..' not in Path(a['path']).parts
+              p=out/a['name']
+              subprocess.run(['curl','--fail','--location','--silent','--show-error','--retry','3','https://cut-a-dor.sugarypixie10.chatgpt.site/'+a['path'],'-o',str(p)],check=True)
+              b=p.read_bytes();assert len(b)==a['bytes'] and hashlib.sha256(b).hexdigest()==a['sha256'],a['name']
+          with zipfile.ZipFile(out/'Cut-A-Dor-1.2.1-Source.zip') as z:
+              for n in z.namelist():
+                  p=Path(n);assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts and '.openai' not in p.parts
+              assert z.testzip() is None
+              z.extractall('.')
+          assert Path('firmware/src/dsp/cad.c').exists() and Path('build/gen/felucca_font.h').exists()
+          for a in m['assets']:
+              p=Path('dist')/a['path'];p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(out/a['name'],p)
+          shutil.copyfile(out/'release-manifest.json','dist/release-manifest.json')
+          sums=''.join(a['sha256']+'  '+a['name']+'\n' for a in m['assets'])
+          (out/'SHA256SUMS.txt').write_text(sums);Path('dist/downloads/SHA256SUMS.txt').write_text(sums)
+          PYTHON
+      - name: Verify the published engine and protocols
+        run: |
+          node tests/web_test.mjs
+          node tests/device_browser_test.mjs
+          node tests/installer.test.mjs
+          python3 tests/recovery_test.py
+      - name: Publish editable source, immutable tag and release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet || git commit -m 'Release Cut-A-Dor 1.2.1: complete editable source, editor, firmware and recovery'
+          git push origin HEAD:main
+          git tag v1.2.1
+          git push origin v1.2.1
+          cat > "$RUNNER_TEMP/release-notes.md" <<'NOTES'
+          # Finish the silence.
+
+          **Cut-A-Dor 1.2.1 — the dirty little beat dojo. By Kid Bunka.**
+
+          Free M-VAVE FM-1 rhythm firmware, a real browser instrument/editor, 76 factory sounds and 48 expansion hits. Eight recordable punch effects. Step editing. MIDI sync. No black belt required. Cannot do your taxes.
+
+          [PLAY / WEBSITE](https://cut-a-dor.sugarypixie10.chatgpt.site/) · [EDITOR](https://cut-a-dor.sugarypixie10.chatgpt.site/dojo.html) · [INSTALL / RECOVERY](https://cut-a-dor.sugarypixie10.chatgpt.site/install/)
+
+          Expected identity: **FM-1_7010201**. Start from M-VAVE **Original V15 / FM-1_015**. Download the recovery kit first. No intermediate custom firmware is required. Projects and audio banks are separate backups.
+
+          The firmware image is unchanged from the owner-tested package. Read TEST-REPORT.txt for software checks and physical-test limits. Browser pattern edits stay in the browser; USB tools upload sound banks and export device projects. No live device pattern or project upload is claimed.
+
+          Full editable source is present at this tag and on main. Fork, modify and redistribute under GPL-3.0-only, retaining corresponding source and licences. Sample audio is CC0; fonts retain their own licences. Original V15 is manufacturer recovery software, not GPL code. Independent project; no manufacturer endorsement.
+
+          Assets include firmware, complete source, curated soundbanks, an offline website, recovery kit, quick start and SHA-256 fingerprints. The offline website needs Python 3; keep source and recovery downloads separately for offline use.
+          NOTES
+          gh release create v1.2.1 "$RUNNER_TEMP/cad-assets/"* --verify-tag --title 'Cut-A-Dor 1.2.1 — Finish the Silence' --notes-file "$RUNNER_TEMP/release-notes.md" --latest
