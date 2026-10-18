@@ -1,0 +1,266 @@
+CUT-A-DOR 0.3 SOUND SOURCES
+64 CC0 one-shots, 12 original one-bar arrangements.
+18 newly curated acoustic recordings: 6 kicks, 6 snares, 6 hats.
+Karoryfer Gogodze Phu Vol II and Virtuosity Drums (Versilian / Karoryfer).
+All source/license evidence and compact PCM included in the complete source archive.
+Code GPL-3.0-only; fonts SIL OFL.
+
+808 Round / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/bd_808.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Pure Sub / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/bd_pure.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Boom Dust / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/bd_boom.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Fat Punch / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/bd_fat.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Dead Kick / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/kick_mic/ks_vl6_rr1.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Front Kick / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/front_mic/ks_vl5_rr2.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Retro Kick / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/retro_mic/ks_vl4_rr3.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Club Kick / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/kickmic/kick/kickmic_kick_snoff_vl4_rr1.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Ribbon Kick / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/mid/kick/mid_kick_snon_vl3_rr2.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Vintage Kick / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/lofi/kick/lofi_kick_snon_vl4_rr3.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Zome Kick / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/bd_zome.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Acoustic Hard Kick / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_bass_hard.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Acoustic Soft Kick / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_bass_soft.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Heavy Kick / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_heavy_kick.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Hollow Electro Kick / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/elec_hollow_kick.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Concert Bass Drum / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Bass%20Drum%201/BDrumNew_hit_v3_rr1_Sum.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Acoustic Hard Snare / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_snare_hard.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Acoustic Soft Snare / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_snare_soft.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Dead Snare / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/snare_mic/sc_vl6_rr1.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Retro Snare / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/retro_mic/sc_vl5_rr2.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Edge Snare / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/front_mic/se_vl5_rr1.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Club Snare / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/snaremic/snare/snaremic_snare_center_vl28.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Muted Snare / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/mid/snare/mid_snare_muted_vl14.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Vintage Rim / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/lofi/snare/lofi_snare_rimshot_vl12.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+High Electro Snare / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/elec_hi_snare.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Filtered Electro Snare / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/elec_filt_snare.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Modern Snare Two / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Snare%20Drum%2C%20Modern%202/Snare3M_HitSN_v4_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Modern Snare Three / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Snare%20Drum%2C%20Modern%203/Snare4_HitSN_v4_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Studio Closed Hat / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_cymbal_closed.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Retro Loose Hat / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/retro_mic/hl_vl3_rr2.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Studio Pedal Hat / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_cymbal_pedal.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Dead Closed Hat / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/oh_mic/hc_vl3_rr1.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Zild Hat / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/hat_zild.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Retro Closed Hat / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/retro_mic/hc_vl4_rr2.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Foot Chick / CC0-1.0
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/Samples/oh_mic/hf_vl3_rr1.wav
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii/blob/69a0274cdc39c99c3098cde1bc3789690de86d62/LICENSE
+
+Ribbon Closed / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/mid/hh/mid_hh_closed_vl3_rr1.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Yosh Hat / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/hat_yosh.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+The Black Dog Hat / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/tbd_perc_hat.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Ribbon Half Hat / CC0-1.0
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/Samples/mid/hh/mid_hh_half_vl3_rr2.flac
+https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE
+
+Acoustic Closed Hat / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Hi-Hat%20Cymbal/HiHat_HitC_v3_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Group Clap / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Claps/Clap_rr1.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Solo Clap / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Claps/SoloClap_vl3.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Cross Stick Two / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Snare%20Drum%2C%20Modern%202/Snare3M_Xstick_v2_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Cross Stick Three / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Snare%20Drum%2C%20Modern%203/Snare4_Xstick_v2_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Rimshot Three / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Snare%20Drum%2C%20Modern%203/Snare4_rimshot_v2_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Finger Snap One / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/perc_snap.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Finger Snap Two / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/perc_snap2.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Low Tom / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_tom_lo_hard.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Mid Tom / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_tom_mid_hard.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+High Tom / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_tom_hi_hard.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Electro Wood / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/elec_wood.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Electro Bong / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/elec_bong.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+The Black Dog Blip / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/tbd_perc_blip.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+The Black Dog Tap / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/tbd_perc_tap_1.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Studio Cowbell / CC0-1.0
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/etc/samples/drum_cowbell.flac
+https://github.com/sonic-pi-net/sonic-pi/blob/7b39b6639705f801dd9d907d6c1715b8c795a376/LICENSE.md
+
+Muted Cowbell / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Cowbells/Cowbell2_Muted_v3_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Small Shaker / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Shaker%2C%20Small/Mid_ShakerHighFaster_Down_rr1.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Large Shaker / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Shaker%2C%20Large/LShaker_Shake1D_rr2_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Tambourine Hit / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Tambourine%201/Tamb1_Hit_v2_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+High Bongo / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Bongos/BongoH_Hit1_v3_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Open Conga / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Membranophones/Struck%20Membranophones/Conga/Conga_HitN_v3_rr1_Sum.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Claves / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Claves/Claves1_Hit_v3_rr1_Mid.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Cajon Bass / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Cajon/Cajon_hit1_f_rr1.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+Woodblock / CC0-1.0
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Woodblock/wood_click_f_rr1.wav
+https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE
+
+New Rocker display typeface — Copyright 2011 Pablo Impallari, Brenda Gallo and Rodrigo Fuenzalida. SIL Open Font License 1.1.
+https://github.com/google/fonts/tree/main/ofl/newrocker
+License included: fonts/NewRocker-OFL.txt. Self-hosted, no external font requests.

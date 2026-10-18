@@ -1,0 +1,35 @@
+CUT-A-DOR 1.2.1 — RELEASE TEST SCOPE / 18 OCTOBER 2026
+Released image is unchanged from the owner-tested FM-1_7010201 package.
+SHA256 5d4be92061cc5bf1396d3ff599ac3a1ef9ec1261afe003b74e32f4298307f614
+
+OWNER REPORT
+The owner reports that the latest functions work on the FM-1. This is a normal
+use acceptance report, not a measured certification of every MIDI setup, every
+bank transfer or deliberate power-loss/chip-recovery scenario.
+
+SOFTWARE / PACKAGE
+32,625,436 core assertions; 168,690 MIDI checks; ASan/UBSan engine and UI suite;
+actual project Save/load audio comparison; 2,710 interrupted project writes;
+all 27 keys in three modes tested for Setup/MIDI routing; duplicate panel map
+rejection; help/long press/mixer/step/sample bank tests; WebAssembly and AudioWorklet
+at 44.1/48/96 kHz; project/bank checksums; legacy imports; WAV export.
+30-minute offline audio simulation: 79,380,000 frames, no timing drift or command/
+MIDI queue loss. This is simulated duration, not a measured physical endurance run.
+Installer/loader and recovery boundary tests use mock devices, never destructive
+hardware tests. Identity, package CRCs, payload and padding match the compiled binary.
+App 551636 bytes, slot headroom 29928 bytes. RAM 36756 / 98304, pool 265728 / 344064.
+
+EDITOR BOUNDARY
+Browser pattern editing, sound audition/assignment, WAV import, bank packing,
+project Save/Open, FX tape and WAV bounce are local. USB tools upload selected
+sound banks and export the device project. No project upload or live hardware
+pattern editor is claimed. A device update is a separate explicit operation.
+
+RELEASE WEBSITE CHECKS
+Actual Chrome: engine start/stop, New Beat, step accents, lane level and curated
+bank loading checked. Project download created and checksum validated. WAV bounce downloaded and validated
+as mono 44.1 kHz / 16-bit, 460174 frames for four bars at 92 BPM. MIDI editor
+simulation covers identity, exclusive tab lock, bank validation/chunks/commit/abort,
+project size and chunk validation, concurrent operation rejection and disconnect.
+Installer DOM simulation and rescue simulation passed. Physical USB bank transfers
+and destructive recovery scenarios are not claimed as newly tested.

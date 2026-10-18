@@ -1,0 +1,36 @@
+CUT-A-DOR 1.2.1 — MIDI CONNECTIONS
+
+Press GLO for SETUP, then GLO again to open MIDI SYNC. Four knobs show SOURCE, USB OUT, IN CH, BPM.
+SOURCE = INT (internal), USB (USB MIDI input), JACK (TRS MIDI input).
+USB OUT defaults OFF. Turn it ON with internal tempo to send 24 PPQN Clock,
+Start, Stop and Continue. It sends no notes. Clock runs while stopped, with
+transport messages telling the other device when to play. Follow mode never
+forwards clock, avoiding clock loops. Only the selected source can start/stop
+or clock the sequencer. In CH selects ANY, 1..16 or CLOCK (ignore notes/CC).
+
+MIDI Start returns to the beginning; Continue preserves song position, part,
+section and recorded automation position. On the MIDI page, PLAY resumes a
+stopped beat. HOME then PLAY starts over. Receiving no clock for two seconds
+stops a follower. USB output congestion stops transport, clears stale clocks,
+queues Stop, disables USB OUT and shows an overflow notice. Fix the USB host
+connection, then enable output again. A disconnected device cannot receive Stop.
+
+USB topology: FM-1 is a USB device, not a USB host. Connect it to a computer,
+a USB MIDI host/router or another instrument with documented USB host support.
+Route its clock to the follower. Two FM-1s cannot connect through a plain USB
+cable. The physical MIDI jack is input-only; no jack Clock OUT is claimed.
+Use the correct MIDI adapter/cable wiring for the FM-1 and your source device.
+
+Notes 36..51: drum pads or break slices in BREAK mode. Velocity 1..127.
+CC20..27: hold the eight FX when >=64, release below64.
+CC120/123: immediately silence voices and clear FX; clock transport continues.
+No note sequencer output, MIDI Song Position Pointer or Bluetooth MIDI.
+
+Software validation: Continue/Start/Stop and clock-loss cases; USB/TRS source
+isolation; channel filtering; 40,000 jittered edges with exact song position;
+24 PPQN output at40..220 BPM; timestamp/queue wrap, bounded overflow and fail-stop.
+Output is timestamped relative to the rendered audio half-buffer. These tests
+cannot measure the physical FM-1 USB scheduling jitter, CPU margin or jack timing.
+Required bench test: one master + one follower, starts/resumes, tempo sweeps,
+USB disconnect/reconnect, loaded 16-voice FX performance, long run, bank transfer
+while stopped, and saving/restarting MIDI settings. No device has been flashed.

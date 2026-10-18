@@ -1,0 +1,22 @@
+CUT-A-DOR 1.0 SOUND BANK AUDIT — SOFTWARE CHECKS
+48 unique, additional source recordings; 48 unique source SHA-256 values; no factory source URL reused.
+3 pinned CC0 repositories; Git blob hash and source size verified for every downloaded hit.
+All source recordings: zero clipped samples. All prepared PCM: first/last frame zero, peak 26000.
+Largest decoded peak: 29024/32768; minimum waveform SNR: 14.48 dB.
+Loudest retained tail immediately before taper: -23.0 dB relative to source peak.
+A heavily clipped retro kick, a two-sample clipped snare and a long noisy shaker were rejected and replaced.
+Compact processing: no pitch-shift duplicates, no synthesized layers; antialiased mono resampling and shaped tails.
+Bank output reproduced byte-for-byte in a second, separate output directory.
+PASS 340 checks; 48 sounds validated, mapped and rendered; 24 all-16-pad FX stress runs; no sanitizer errors.
+Native checks compiled against the actual firmware cad.c with AddressSanitizer + UndefinedBehaviorSanitizer.
+Browser editor: exact encode match, pack/unpack roundtrip, decoding, category mapping and bad/truncated files checked.
+No device flash, physical MIDI transfer, live CPU-load measurement or human listening approval was performed here.
+
+BANK MEMORY (includes 512-byte header; limit 81920 each):
+DUSTY ROOM: 71264 B; 16 hits; 10656 B remaining; SHA-256 548f200712b3294ec4d489bd133658b62e86a89d68753f407da5c1d1873bdd77
+VELVET CUT: 77600 B; 16 hits; 4320 B remaining; SHA-256 e85ac66eb0bbb1e876384a359e2969a93aa717da55cbf4b5ca1875e13d6950ad
+BREAK PIT: 75884 B; 16 hits; 6036 B remaining; SHA-256 6f6a2d98c5bd54f782b3e13fd86063d4e54209c3825df4adb22ebd67685efc26
+Total stored: 224748 B; total spare across three slots: 21012 B.
+All 48 zones are occupied; spare bytes allow longer/replacement sounds, not a 17th sound in any one bank.
+No increase to firmware application image or fixed voice count is needed for the bank assets themselves.
+Kit assignment uses both samples of every category, without falling back to factory sounds.

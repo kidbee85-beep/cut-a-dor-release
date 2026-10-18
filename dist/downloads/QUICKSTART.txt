@@ -1,0 +1,45 @@
+CUT-A-DOR 1.2.1 — THE FIRST ROUND
+By Kid Bunka. For M-VAVE FM-1. Identity FM-1_7010201.
+
+BROWSER
+Open the live editor. Press START BEAT; choose a style and drum kit. NEW makes a
+fresh pocket; MUTATE changes a few hits. Click the two-bar grid to edit steps.
+Select a step and set velocity/nudge. Mix each drum lane and the Master level.
+DJ pads hold eight effects; REC records FX moves, not microphone audio. Stop or
+let the chosen 1/2/4/8-bar take finish; overdub at the next loop boundary.
+SAVE PROJECT writes a .cadp; OPEN PROJECT restores it. Save any .cadb banks too.
+WAV BOUNCE renders the current part and FX tape at 44.1 kHz / 16-bit mono.
+
+SOUND CRATE
+Audition factory hits, assign pads, load one of three expansion kits, or import
+PCM WAV files. Trim and categorise hits. Banks hold up to 16 sounds in 80 KiB.
+SAVE BANK exports .cadb. LOAD INTO DOJO loads the selected browser bank slot.
+Use desktop Chrome/Edge for USB MIDI. FIND PORTS, select the FM-1 input/output,
+CONNECT, then acknowledge replacement before SEND BANK. Keep the original .cadb.
+GET DEVICE PROJECT exports the stopped FM-1 project. Browser pattern edits stay
+local; the release editor does not upload projects or remotely edit hardware steps.
+DISCONNECT before opening the firmware installer. No automatic USB access/writes.
+
+INSTALL
+Download Recovery Kit and back up personal projects. Connect only one FM-1 with
+a USB data cable. Begin from Original V15. In Install: DETECT, select Cut-A-Dor,
+acknowledge preparation, INSTALL. Keep power/USB connected until identity confirms.
+Expected identity FM-1_7010201. Start at low listening volume, then check controls.
+
+HARDWARE
+HOME: Live + DJ. SEL / OCT: DJ, Drum, Break. Hold a page button 0.7 s for help;
+release then browse with PRESETS/SELECT. Short page-button press closes help.
+EDIT: Drum Mix. Four knobs: Track, Level, Punch, Master. EDIT again: Beat DNA.
+SEQ: Step Dojo; again Parts. FX: Punch; again Tape Color. ENV: FX Tape. LFO: sounds.
+GLO: Setup (active light, idle glow, motion, splash); again MIDI sync settings.
+Stop + short SAVE stores the beat, tape, mixer and preferences. Hold SAVE is help.
+DJ whites 1-8: Roll, Stutter, Reverse, Brake, Filter, Echo, Crush, Gate.
+Whites 9-16: Lock, New, Fill, A, B, Drop, Undo, Clean.
+Blacks 1-8: Kick, Snare, Hat, Open Hat, Clap, Perc, Rim, Extra mutes.
+Blacks 9-11: Tap, Tape bypass, Undo. Step/Mix keys have their own on-screen help.
+USB MIDI clock out, USB/TRS clock in. Two USB devices need a MIDI host/router.
+
+RECOVERY
+Read RECOVERY.txt. Original V15 is the normal return path. Resume an interrupted
+update with its exact same package. There is no automatic rollback slot. The
+separate chip rescue route requires its own tools; do not interrupt power as a test.

@@ -1,0 +1,54 @@
+{
+  "version": "1.2.1",
+  "identity": "FM-1_7010201",
+  "assets": [
+    {
+      "name": "Cut-A-Dor-1.2.1-Source.zip",
+      "path": "source.zip",
+      "bytes": 15539288,
+      "sha256": "9ee372ae674ba8a0e49fdebfb9df489609f344c79df627f696d678eaad2a65f8"
+    },
+    {
+      "name": "Cut-A-Dor-1.2.1-Sensei-FM1.fwsc",
+      "path": "install/Cut-A-Dor-1.2.1-Sensei-FM1.fwsc",
+      "bytes": 609696,
+      "sha256": "5d4be92061cc5bf1396d3ff599ac3a1ef9ec1261afe003b74e32f4298307f614"
+    },
+    {
+      "name": "FM-1-Original-V15.fwsc",
+      "path": "install/FM-1-V15.fwsc",
+      "bytes": 699956,
+      "sha256": "db1642b2b6fa5c2cccb11ffd13878068bb28601678d3644049f99dc40e7edb8a"
+    },
+    {
+      "name": "Cut-A-Dor-Recovery-Kit.zip",
+      "path": "downloads/Cut-A-Dor-Recovery-Kit.zip",
+      "bytes": 17693117,
+      "sha256": "adfbe9e44cdbedfd49c12645fca6341bb13eb027ccd83c2211f22ddef8810406"
+    },
+    {
+      "name": "Cut-A-Dor-Soundbanks.zip",
+      "path": "downloads/Cut-A-Dor-Soundbanks.zip",
+      "bytes": 2175990,
+      "sha256": "01408a1552258444fcb2e23a208b5558fe596c015ba7551588e7066b8b9fbd3d"
+    },
+    {
+      "name": "Cut-A-Dor-Website.zip",
+      "path": "downloads/Cut-A-Dor-Website.zip",
+      "bytes": 16156921,
+      "sha256": "f8d047e8f86b1338d3400e960ac67cfe4eed3a16b10f139a6efbcf54c5e2bbb2"
+    },
+    {
+      "name": "QUICKSTART.txt",
+      "path": "downloads/QUICKSTART.txt",
+      "bytes": 2751,
+      "sha256": "10378f125b3ef2c920a8533e564d524c2672cef199ac1a2b21845fb4100c1787"
+    },
+    {
+      "name": "TEST-REPORT.txt",
+      "path": "downloads/TEST-REPORT.txt",
+      "bytes": 2207,
+      "sha256": "640a56e32c7e89520d4892b01b01548ee98f6930a61ad9e53a41147887453011"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+CUT-A-DOR BUILD AND TEST
+
+1. Install Python 3/Pillow and a C11 compiler. No npm packages are required.
+2. python3 tools/make_samples.py
+   python3 tools/gen_font.py build/gen/felucca_font.h
+   python3 tools/gen_words.py firmware/words.tsv dist/words build/gen/ann_words.h
+3. Host checks (macOS SDK selection may be needed when local Xcode versions differ):
+   clang -DEN_HOST -O1 -g -fsanitize=address,undefined -ffp-contract=off \
+     -Ibuild/gen -Ifirmware/src/dsp tests/core_test.c firmware/src/dsp/cad.c -o build/core-test
+   build/core-test
+   Repeat for tests/editor_test.c adding -Ifirmware/src;
+   tests/storage_test.c uses -Ifirmware/src and does not link cad.c.
+   host/display.c links cad.c with -Ifirmware/src; run with build as argument.
+   tests/soak.c is the 30-minute simulated audio-duration test.
+4. WASI_SDK=/absolute/path/to/wasi-sdk sh tools/build_web.sh
+   node tests/web_test.mjs
+5. Native target requires Linux x86-64 or Docker linux/amd64:
+   sh tools/get_toolchain.sh /absolute/path/to/jieli
+   git clone --depth 1 --branch AC79NN_SDK_V1.2.1_2023-12-13 \
+     https://gitee.com/Jieli-Tech/fw-AC79_AIoT_SDK.git /absolute/path/to/ac79-sdk
+   JIELI_TOOLCHAIN=/absolute/path/to/jieli/toolchain \
+   AC79_SDK=/absolute/path/to/ac79-sdk python3 tools/build.py --release 1.2.1-sensei
+
+The Sensei release command produces identity FM-1_7010201. This is a development
+identity, not a claimed registered assignment. The packager retains FM-1 compatibility.
+The app slot is 0x8DFBC bytes (581,564 bytes). Source constants currently contain
+458,436 bytes of compressed sample data plus approximately 34,592 font bitmap bytes.
+Only a successful target link/build confirms actual code/data size and RAM fit.
+Do not infer hardware real-time capacity from the Mac/WebAssembly test speed.
+
+Device bank flash: 0xA0000, 0xB4000, 0xC8000, each 0x14000 bytes.
+Panel calibration: 0xDC000 and 0xDD000. Project: 0xFC000 and 0xFD000.
+Bank header is written last. An interrupted replacement invalidates that bank;
+it is not an A/B copy of the previous bank. Projects use CRC-protected A/B sectors.
+No operation in the editor writes the bootloader or installs firmware.
+
+Source baseline is preserved verbatim where applicable; all changed/new app and DSP
+code is in firmware/src/app and firmware/src/dsp/cad.*. See the public test report for the actual bench coverage and recovery limits. Restore/installer tools are included
+for provenance, not as authorization to run them against the user's device.

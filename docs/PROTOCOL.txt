@@ -1,0 +1,48 @@
+CUT-A-DOR EDITOR PROTOCOL v1
+
+Request: F0 7D 43 41 44 command sequence payload F7
+Reply:   F0 7D 43 41 44 command sequence status payload F7
+All bytes between framing bytes are 7-bit. Status 0 succeeds; nonzero rejects.
+Sequence is echoed. Browser permits one awaited request per upload chunk.
+An identity response with the exact Cut-A-Dor family and version 1 is mandatory.
+
+1 INFO: no payload; reply ASCII "CUT-A-DOR <version>\0", protocol=1, banks=3, playing.
+2 COMMAND: type,id,value-low7,value-high7; id127 = -1. No raw export/import commands.
+10 BANK BEGIN: slot0..2, total bytes as three little-endian 7-bit digits.
+   Stopped transport only, matched flash chip only. Erases only that 80 KiB bank.
+11 BANK DATA: slot, offset u21, packed bytes (up to224 raw bytes).
+   Sequential offsets only. First512 bytes retained in RAM until commit.
+12 BANK END: slot. Full header/data CRC and zone bounds/index validation;
+   writes header last, invalidates cache, registers bank, ACKs only if valid.
+13 ABORT: no payload. Invalidates the upload transaction; bank stays uncommitted.
+20 PROJECT SNAPSHOT: no payload; reply byte size as two7-bit digits.
+21 PROJECT READ: offset u21; reply up to224 raw snapshot bytes packed7.
+
+Packing: groups up to7 bytes, preceded by a bitmask containing their high bits,
+then seven low-bit bytes. CRC is standard reflected CRC32 (0xEDB88320).
+15-second upload inactivity timeout; UI input disabled during the transaction.
+Source tests emulate flash and check limits/partial transfers; hardware remains untested.
+
+BANK FILE: 512-byte cad_bank struct, then independently seekable IMA ADPCM blocks.
+Struct layout is declared and compile-time asserted in firmware/src/dsp/cad.h.
+Each132-byte block has signed16 predictor, uint8 index, reserved0; then256 coded
+samples as128 low-nibble-first bytes. This is a project-specific block wrapper,
+not a standard WAV IMA file. Little endian throughout. Every zone is mono.
+
+PROJECT FILE: 16-byte wrapper: magic CDPJ, version1, raw struct size, raw CRC32;
+then cad_project bytes (currently2656). Native project storage uses the same struct
+inside its A/B storage object. The file header protects disk import/export.
+User bank audio is stored separately and must accompany projects that use it.
+
+Sensei v4 project extension (1.2): sizeof 2672. Append track_level[8] (0..200),
+punch (0..100), reserved[3] (zero) at byte 2660. Commands 31 = Track Level
+(id 0..7, value 0..200), 32 = Punch (id ignored, value 0..100). These are internal engine/browser
+commands, not additions to the device SysEx command whitelist. Project export
+includes them. Import v1/v2/v3 adds
+100% lane levels and Punch 0. Do not send v4 files to older firmware.
+
+Sensei v5 project extension (1.2.1): sizeof 2676. Append four bytes at 2672:
+active LED level 0..3, idle glow 0..3, motion 0..1, splash 0..1. Defaults 3/1/1/1.
+v1-v4 projects upgrade; v4 mixer/tape data stay unchanged. Older firmware cannot
+read v5. Export original device projects before updating. The browser status
+layout stays at 77 words; settings are device-only and retained in project files.

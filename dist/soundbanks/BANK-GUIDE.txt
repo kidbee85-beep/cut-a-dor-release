@@ -1,0 +1,81 @@
+CUT-A-DOR 1.2.1 — THE EXTRA CRATE
+48 additional recorded hits. Three small banks. Zero borrowed record breaks.
+
+DUSTY ROOM — close, dry kicks and snares, live hats, bongo, side stick and toms.
+VELVET CUT — ribbon colour, softer snare articulations, shaker, tambourine and toms.
+BREAK PIT — retro and lo-fi microphone colour, a rimshot, conga, cajon and wood.
+
+These are 48 different source recordings, not 48 pitch changes of a few hits.
+Six extra sounds in each category: kick, snare, closed/pedal hat, open/half hat,
+clap, percussion, rim/wood and tom/extra. Each bank has exactly two of every
+category, so selecting its User Bank kit fills all eight rhythm tracks and all
+16 drum pads. The second pad row uses the second articulation of each category.
+
+Listen first
+------------
+audition/three-banks-groove-88bpm.wav plays four dry bars from each bank, with a
+one-second gap. The three *-hits.wav files play each stored sound individually,
+in zone order; matching tracklists give timestamps. These auditions are decoded
+from the actual compressed bank audio. They are not master recordings and do
+not include the device's Dust, Noise or filters. Add that colour to taste.
+
+Load a bank in the editor
+------------------------
+1. Open Sound Crate and use OPEN BANK to choose a .cadb file.
+2. Select a User Bank slot. Suggested layout: 1 Dusty Room, 2 Velvet Cut, 3 Break Pit.
+3. LOAD INTO DOJO auditions the bank in the browser. Select its User Bank kit.
+4. For the hardware, stop playback and save your current project. Connect the
+   FM-1 by USB, FIND MIDI PORTS, choose the FM-1 input/output, CONNECT TO FM-1,
+   then SEND BANK. Wait for the device-confirmed completion before disconnecting.
+5. Select the corresponding User Bank kit on the FM-1 and save the project.
+
+SEND BANK replaces only the selected user-bank slot. Preserve any custom bank
+by keeping its original .cadb file before replacing it. Installing the application
+image and loading expansion banks are separate operations unless the release
+installer explicitly offers both. A .cadb is a sound bank, never a firmware update.
+These bank transfers and the new firmware still need their physical FM-1 check;
+the included checks are software tests, not a claim of tested hardware transfer.
+
+What the banks do not do
+-----------------------
+No miracle time stretching, no secret vocal stems, no recording from your decks,
+no cymbal that magically lasts forever in 80 KiB. Every bank is at most 80 KiB
+and 16 sounds. The sampler retains its 16-voice limit. The 12 existing original
+break arrangements remain available separately; these expansion files add hits.
+
+Format and sound preparation
+----------------------------
+Mono recordings, 16 kHz for kicks/toms and 22.05 kHz for the other categories.
+High-quality antialiased resampling, onset trim with 1 ms pre-roll, DC removal,
+a short raised-cosine end fade and peak normalization to 26000/32768. Natural
+recorded tails are retained within the bank budget. No pitch shifting, added
+hiss, fake crackle or baked-in artificial reverb. The stored format is seekable
+IMA ADPCM, 132 bytes per 256 frames, with a 512-byte bank header and CRC checks.
+Its 4-bit encoding is lossy: the decoded sound, not the original full-resolution
+recording, is what the audition files demonstrate.
+
+Credits and licence
+------------------
+The recordings are CC0-1.0 from:
+• Karoryfer Gogodze Phu Vol. II — Karoryfer Lecolds / sfzinstruments.
+• Virtuosity Drums — Versilian Studios / sfzinstruments.
+• Versilian Community Sample Library (VCSL) — Versilian Studios and contributors.
+Pinned repository revisions, exact source URLs, source/PCM hashes and processing
+details are in manifest.json. Full CC0 texts are in licenses/. These recordings
+may be used and redistributed under CC0, including commercially. Project scripts
+are GPL-3.0-only; their licence is separate from the CC0 recordings.
+
+Source collections:
+https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-ii
+https://github.com/sfzinstruments/virtuosity_drums
+https://github.com/sgossner/VCSL
+
+Rebuild
+-------
+Extract Soundbank-Source.zip and run: python3 build_banks.py
+The included compact PCM plus manifest rebuild the .cadb files byte-for-byte
+with Python's standard library alone. Original source recordings are also
+included; fetch_sources.py can retrieve the exact pinned originals and verifies
+Git blob hashes. prepare_pcm.py documents the preprocessing pipeline and needs
+NumPy, SoundFile and macOS afconvert. Preprocessing byte identity is platform-
+dependent; the bundled compact PCM is the canonical reproducible build input.

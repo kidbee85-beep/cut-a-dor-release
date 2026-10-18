@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {Device} from '../dist/midi.mjs';
+import {pack7} from '../dist/codec.mjs';
+let locked=false,sends=[],rejectCommand=0,shortChunk=false;
+const project=new Uint8Array(2676).map((_,i)=>i&255),input={id:'in',state:'connected',name:'FM-1'};
+const output={id:'out',state:'connected',name:'FM-1',send(a){sends.push(a);const cmd=a[5],seq=a[6];let data=[];
+ if(cmd===1)data=[...new TextEncoder().encode('CUT-A-DOR 1.2.1'),0,1];
+ if(cmd===20)data=[project.length&127,project.length>>7];
+ if(cmd===21){const off=a[7]|a[8]<<7|a[9]<<14;data=pack7(project.slice(off,off+(shortChunk?12:224)));}
+ queueMicrotask(()=>input.onmidimessage?.({data:new Uint8Array([240,125,67,65,68,cmd,seq,cmd===rejectCommand?2:0,...data,247])}));
+}};
+const access={inputs:new Map([['in',input]]),outputs:new Map([['out',output]])};
+Object.defineProperty(globalThis,'navigator',{configurable:true,value:{requestMIDIAccess:async()=>access,locks:{async request(name,opts,fn){assert.equal(name,'fm1-firmware-update');if(locked)return fn(null);locked=true;try{return await fn({name});}finally{locked=false;}}}}});
+const tick=()=>new Promise(r=>setTimeout(r,0));const d=new Device();assert.equal(sends.length,0);await d.connect();assert.equal(sends.length,0);await d.connect('in','out');assert(d.verified&&locked);assert.deepEqual(await d.readProject(),project);
+const other=new Device();await assert.rejects(()=>other.connect('in','out'),/Another FM-1/);assert(d.verified);
+const bank=new Uint8Array(readFileSync(new URL('../dist/soundbanks/dusty-room.cadb',import.meta.url)));
+const before=sends.length;await assert.rejects(()=>d.upload(bank,3),/valid bank/);await assert.rejects(()=>d.upload(bank.slice(1),0));assert.equal(sends.length,before);
+let progress=[];await d.upload(bank,0,p=>progress.push(p));assert.equal(progress.at(-1),1);assert(sends.some(a=>a[5]===12));
+rejectCommand=11;await assert.rejects(()=>d.upload(bank,0),/rejected/);assert.equal(sends.at(-1)[5],13);assert(!d.busy);rejectCommand=0;
+shortChunk=true;await assert.rejects(()=>d.readProject(),/Incomplete/);shortChunk=false;
+input.state='disconnected';access.onstatechange();await tick();assert(!d.verified&&!locked&&!input.onmidimessage);await assert.rejects(()=>d.readProject(),/Connect/);
+input.state='connected';await d.connect('in','out');const p=d.readProject();await assert.rejects(()=>d.readProject(),/Wait/);await p;d.disconnect();await tick();assert(!locked);
+console.log('PASS browser MIDI: zero automatic access, identity, exclusive editor/installer lock, bank validation before writes, chunk/commit/abort, project export integrity, operation isolation and USB disconnect cleanup. Mock USB.');

@@ -1,0 +1,22 @@
+CUT-A-DOR — WEBSITE, INSTALLER & RECOVERY CREDITS
+
+New Cut-A-Dor code: GPL-3.0-only. Device source: ../source.zip.
+Website and installer source: ../source.zip.
+
+FM-1 package reader and USB-MIDI updater:
+Copyright (C) 2026 Leo Kuroshita (@kurogedelic), Hügelton Instruments.
+GPL-3.0-only. Notices retained in install/fm1pkg.js and install/fm1ota.js.
+https://github.com/kurogedelic/felucca
+https://github.com/charlesvestal/fm1-x0x
+
+Mac USB rescue: inherited fm1_rescue.py from the X0X project, GPL-3.0-only.
+Boot protection and updater behavior are documented in the corresponding
+Cut-A-Dor source. Open-source lineage is not an installation dependency:
+the installation flow starts with M-VAVE Original and can return to Original.
+
+Original FM-1 V15 binary: M-VAVE manufacturer firmware, included as manufacturer recovery material. No open-source license is asserted for it.
+https://www.m-vave.com/download
+
+Sample credits: ../SOURCES.txt. 64 CC0 one-shots and 12 original arrangements.
+Barlow Semi Condensed fonts: SIL Open Font License; notices in device source.
+No endorsement by M-VAVE or upstream project authors is implied.

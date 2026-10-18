@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "sounds": 48,
+  "minimum_snr_db": 14.48,
+  "peak": 0.885742,
+  "bit_identical_with_editor_encoder": true,
+  "editor_pack_unpack_roundtrip": true,
+  "damaged_and_truncated_rejected": true
+}

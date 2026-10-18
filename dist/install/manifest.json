@@ -1,0 +1,14 @@
+{
+  "cad": {
+    "label": "Cut-A-Dor 1.2.1 \u2014 Release",
+    "file": "Cut-A-Dor-1.2.1-Sensei-FM1.fwsc",
+    "product": "FM-1_7010201",
+    "sha256": "5d4be92061cc5bf1396d3ff599ac3a1ef9ec1261afe003b74e32f4298307f614"
+  },
+  "stock": {
+    "label": "M-VAVE Original V15",
+    "file": "FM-1-V15.fwsc",
+    "product": "FM-1_015",
+    "sha256": "db1642b2b6fa5c2cccb11ffd13878068bb28601678d3644049f99dc40e7edb8a"
+  }
+}

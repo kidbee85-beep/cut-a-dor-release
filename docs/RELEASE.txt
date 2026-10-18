@@ -1,0 +1,3 @@
+Cut-A-Dor 1.2.1 / FM-1_7010201
+See README.md and dist/downloads/TEST-REPORT.txt.
+Firmware SHA-256: 5d4be92061cc5bf1396d3ff599ac3a1ef9ec1261afe003b74e32f4298307f614

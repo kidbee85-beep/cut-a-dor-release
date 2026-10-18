@@ -1,0 +1,102 @@
+CUT-A-DOR 1.2.1 — RECOVERY KIT
+Current identity FM-1_7010201; manufacturer return image Original V15 / FM-1_015.
+This kit contains current firmware, original recovery firmware, corresponding
+source and rescue tools. It is not a backup of personal music and has no automatic
+rollback slot. Keep .cadp projects with all of their .cadb sound banks.
+
+BEFORE INSTALLING
+1. Keep the Recovery Kit on your computer, separately from the website.
+2. Save personal factory sounds/settings with the manufacturer's available
+   export tools, or document them manually. A factory .fwsc is not that backup.
+3. Use desktop Chrome or Edge and a USB DATA cable. Close the editor, other
+   MIDI apps and other installer tabs. Connect only one FM-1, directly by USB.
+4. Use the website's Install / Rescue page or the local website launcher.
+   The installer first checks the package SHA-256. DETECT FM-1 only queries
+   identity; it does not send an upgrade command.
+5. Choose Cut-A-Dor 1.2.1, read the acknowledgement, then press INSTALL CUT-A-DOR.
+   Keep power, cable and tab connected until restart and identity confirmation.
+6. Expected Cut-A-Dor identity: FM-1_7010201. Begin at low master volume.
+   Check sound, buttons, knobs, save/reboot and MIDI before extended use.
+
+NORMAL RETURN TO FACTORY
+Open Install / Rescue, detect the device and choose M-VAVE Original V15.
+The bundled manufacturer file has SHA-256:
+db1642b2b6fa5c2cccb11ffd13878068bb28601678d3644049f99dc40e7edb8a
+Package identity: FM-1_015. The manufacturer application may report a different
+identity spelling. A mismatch is reported as unconfirmed, never as success.
+Check that the original instrument screen and normal operation have returned.
+M-VAVE's M-UPGRADE is an alternative normal update/restore tool:
+https://www.m-vave.com/download
+
+IF THE DEVICE DOES NOT START NORMALLY
+A. CUT-A-DOR SAFE MODE
+   The retained boot protection enters Safe Mode after two failed starts.
+   Audio stays off; the USB updater is enabled. Try restoring Original V15
+   with the installer. This path still needs an actual FM-1 test.
+B. INTERRUPTED WRITE, MIDI LOADER STILL RESPONDS
+   Keep power connected. Save the installer log. Reopen the installer,
+   reconnect and resume the SAME target package. The page remembers an
+   unfinished target where browser storage is available. It restarts the
+   loader write phase and checks the reported identity afterward.
+C. NO MIDI IDENTITY, CHIP UPDATE MODE AVAILABLE (MAC)
+   Read the separate Mac rescue instructions below. The browser cannot speak
+   to the chip's USB update interface. Do not confuse it with the MIDI loader.
+D. NEITHER USB MODE IS REACHABLE
+   Stop. Keep the logs and a photo of the display. Seek hardware assistance.
+   No software route here guarantees recovery from every failure.
+
+MAC RESCUE — LAST RESORT
+Included: fm1_rescue.py, Original-V15.fwsc, RESCUE-MAC.command and its license.
+The Python rescue implementation is the inherited FM-1 X0X community tool.
+The launcher uses this bundled copy, not a freshly downloaded Python script.
+Setup needs internet, Apple's command line tools, Python 3, pyusb and
+libusb-package. The loader is downloaded from a pinned upstream commit and
+checked against its known SHA-256. The tool needs administrator access for USB.
+
+1. Extract the Recovery Kit to a writable folder you intend to keep.
+2. Read the script if desired. Run RESCUE-MAC.command from that folder.
+   If double-click is unavailable, open Terminal, type `bash `, drag the file
+   into Terminal, then press Return. The assistant does not run this for you.
+3. Enter your Mac password only in your own Terminal when sudo asks.
+4. When the tool is waiting, connect and power on the FM-1.
+5. It checks chip key / flash model, reads the whole flash into a local backup,
+   checks preserved areas, and asks before writing. Read the displayed result.
+6. Only type yes if you intend to restore Original V15. Keep the cable and
+   power connected until the write verification and restart have completed.
+
+The tool restricts writes to the application firmware area; it does not
+intentionally overwrite the bootloader or device-specific upper flash data.
+This is a recovery procedure, not a guarantee against damage or interruption.
+Keep any fm1-backup-*.bin file and all logs. A dump is evidence and a backup;
+this kit does not provide a generic one-click restore of arbitrary flash dumps.
+
+BUTTON COMBINATION
+While running: hold OCT- and OCT+ for five seconds -> CHIP UPDATE MODE.
+During power-on: hold OCT- and OCT+ -> PANEL CALIBRATION.
+Do not use chip update mode as the first restore step: it needs the separate
+rescue route. Releasing during the on-screen countdown cancels the entry.
+
+MUSIC BACKUPS AFTER USING CUT-A-DOR
+Stop the device. In the editor, connect and use GET DEVICE PROJECT. This
+downloads the device project directly. SAVE PROJECT saves the browser session.
+Keep the .cadp and each custom .cadb sample bank together. Projects do not
+include user audio. Device transfers are still awaiting hardware validation.
+Restoring factory firmware does not restore personal project contents.
+
+SOURCES
+Manufacturer V15 (downloaded and hash-checked 17 October 2026):
+https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc
+Community recovery documentation:
+https://charlesvestal.github.io/fm1-x0x/manual/#recovering-an-fm-1-that-won-t-start
+https://github.com/charlesvestal/fm1-x0x
+The community platform is code lineage, not an intermediate installation requirement.
+
+MANUFACTURER WORKBENCH CROSS-CHECK — 18 OCTOBER 2026
+The official FM1 Open V13 SDK includes the exact same Original V15 file.
+Our restore installs V15 firmware. The official Workbench also restores all
+128 factory voices across four banks, replacing existing voices. It can restore
+voices without reflashing when the device already reports FM-1_015.
+See Hardware-Test-Guide.txt for the complete Original baseline procedure.
+Workbench: https://open.m-vave.com/fm1-workbench
+The Open firmware itself is NOT required before Cut-A-Dor.
+Manufacturer resource/license notices: M-VAVE-THIRD-PARTY.txt.

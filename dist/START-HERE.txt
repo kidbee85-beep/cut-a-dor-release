@@ -1,0 +1,9 @@
+CUT-A-DOR 1.2.1 — RELEASE / BY KID BUNKA
+Run OPEN-WEBSITE.command on Mac or OPEN-WEBSITE-WINDOWS.cmd on Windows.
+Python 3 is required. Open the printed localhost address in Chrome or Edge.
+Press LAUNCH LIVE EDITOR and then START BEAT. No FM-1 is needed to play.
+Keep the separate Recovery Kit before installing firmware. Read downloads/QUICKSTART.txt.
+Opening a page never installs firmware. Device identity: FM-1_7010201.
+Project files (.cadp) do not include the audio in your sample banks (.cadb).
+Website: https://cut-a-dor.sugarypixie10.chatgpt.site/
+Source: https://github.com/kidbee85-beep/cut-a-dor-release
