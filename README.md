@@ -101,3 +101,5 @@ GPL-3.0-only code; retained upstream lineage and notices are documented in
 [UPSTREAM-LICENSING.md](UPSTREAM-LICENSING.md). Audio evidence and credits are in
 [sound-src](sound-src/) and [SOURCES.txt](dist/SOURCES.txt). Fonts retain their
 licence files. Independent project; not endorsed by M-VAVE or upstream developers.
+
+You can also try Cut-A-Dor in the browser, no flashing needed, in the free community [FM-1 Emulator](https://fm1-emulator.atst.tools/).
